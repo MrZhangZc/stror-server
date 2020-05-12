@@ -1,6 +1,6 @@
 FROM keymetrics/pm2:10-alpine
 
-ARG PORT=4396
+ARG PORT=1520
 
 ENV PORT $PORT
 

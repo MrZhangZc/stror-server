@@ -4,7 +4,7 @@
  * @Author: zhangzhichao
  * @Date: 2020-05-08 18:56:43
  * @LastEditors: zhangzhichao
- * @LastEditTime: 2020-05-10 12:39:04
+ * @LastEditTime: 2020-05-13 01:39:56
  */
 
 /**
@@ -20,7 +20,7 @@ const config = require('config')
  * Get port from environment and store in Koa.
  */
 
-const port = normalizePort(config.get('port') || '4396')
+const port = normalizePort(config.get('port') || '1520')
 
 /**
  * Create HTTP server.

@@ -5,7 +5,7 @@ services:
     container_name: story-api
     image: story-api
     ports:
-    - 4396:4396
+    - 1520:1520
     depends_on:
     - mongo2
     links:
