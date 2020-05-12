@@ -3,13 +3,13 @@
  * @Author: zhangzhichao
  * @Date: 2020-05-10 12:57:19
  * @LastEditors: zhangzhichao
- * @LastEditTime: 2020-05-12 20:18:47
+ * @LastEditTime: 2020-05-13 01:40:31
  */
 
 const router = require('koa-router')();
 const heroController = require('../controller/hero');
 
-router.get('/zzc/:id', async ctx => {
+router.get('/getHeroInfo/:id', async ctx => {
   const jsonData = {};
   const heroId = ctx.params.id;
   try {
