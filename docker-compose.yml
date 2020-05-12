@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  koa-tpl:
+    container_name: koa-tpl
+    image: koa-tpl:latest
+    ports:
+    - 4396:4396
+    depends_on:
+    - mongo
+    links:
+    - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+    - 27029:27017
