@@ -1,7 +1,7 @@
 {
-  port: 4396,
+  port: 1520,
   mongo: {
-    url: "mongodb://mongo/zzchm"
+    url: "mongodb://mongo2/zzchm"
   },
   log4: {
     config: {
