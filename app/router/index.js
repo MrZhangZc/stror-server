@@ -3,16 +3,17 @@
  * @Author: zhangzhichao
  * @Date: 2020-05-10 12:57:19
  * @LastEditors: zhangzhichao
- * @LastEditTime: 2020-05-10 13:45:55
+ * @LastEditTime: 2020-05-12 20:18:47
  */
 
 const router = require('koa-router')();
 const heroController = require('../controller/hero');
 
-router.get('/zzc', async ctx => {
+router.get('/zzc/:id', async ctx => {
   const jsonData = {};
+  const heroId = ctx.params.id;
   try {
-    const hero = await heroController.fetchHerp('猴子');
+    const hero = await heroController.fetchHeroById(heroId);
     jsonData.succ = true;
     jsonData.data = hero;
     ctx.body = jsonData;

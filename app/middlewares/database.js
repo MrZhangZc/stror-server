@@ -3,7 +3,7 @@
  * @Author: zhangzhichao
  * @Date: 2020-05-10 12:53:43
  * @LastEditors: zhangzhichao
- * @LastEditTime: 2020-05-10 15:05:38
+ * @LastEditTime: 2020-05-12 20:07:42
  */
 
 const mongoose = require('mongoose');
@@ -12,7 +12,7 @@ const { resolve } = require('path');
 const glob = require('glob');
 
 glob.sync(resolve(__dirname, '../model', './*.js')).map(require);
-const herosStory = require(resolve(__dirname, '../crawler/hero.json'))
+const herosStory = require(resolve(__dirname, '../crawler/herosStory.json'))
 const database = app => {
   if (process.env.NODE_ENV === 'development') {
     mongoose.set('debug', true);

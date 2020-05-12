@@ -3,7 +3,7 @@
  * @Author: zhangzhichao
  * @Date: 2020-05-10 08:56:15
  * @LastEditors: zhangzhichao
- * @LastEditTime: 2020-05-10 15:08:49
+ * @LastEditTime: 2020-05-12 20:22:33
  */
 
 const mongoose = require('mongoose');
@@ -16,6 +16,7 @@ const HeroSchema = new Schema({
     String
   ],
   storyData: String,
+  heroId: String,
   meta: {
     createdAt: {
       type: Date,
@@ -45,14 +46,13 @@ const thisModel = mongoose.model('Hero', HeroSchema);
  * @param {String} name
  * @return {Object} hero 
  */
-const fetchHerp = async name => {
+const fetchHeroById = async heroId => {
   const hero = await thisModel.findOne({
-    alias: name
+    heroId: heroId
   });
-  console.log(name);
   return hero;
 }
 
 module.exports = {
-  fetchHerp,
+  fetchHeroById,
 }
